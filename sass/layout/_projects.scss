@@ -3,4 +3,7 @@
     grid-column: full-start / full-end;
     margin: 10rem 0;
     background-color: $color-grey-light-2;
+
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
 }

@@ -21,7 +21,6 @@ body {
     color: $color-grey-light-1;
     box-sizing: border-box;
     min-height: 100vh;
-    display: grid;
 }
 
 .container {
@@ -30,7 +29,7 @@ body {
     grid-template-columns: [full-start] repeat(7, [col-start] 1fr [col-end]) [full-end];
     grid-column-gap: 5rem;
     max-width: 100%;
-    background-image: linear-gradient(rgba($color-grey-dark, .93), rgba($color-grey-dark, .93)), url(../img/drawing.jpeg);
+    background-image: linear-gradient(rgba($color-secondary-dark-3, .93), rgba($color-secondary-dark-3, .93)), url(../img/drawing.jpeg);
     background-position: center;
     background-attachment: fixed;
     background-size: cover;

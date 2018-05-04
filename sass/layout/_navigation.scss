@@ -6,8 +6,8 @@
     text-transform: uppercase;
     height: 7rem;
     width: 100%;
-    background-image: linear-gradient(rgba($color-secondary-dark-1, 1), rgba($color-secondary-dark-3, 1 ), rgba($color-secondary-dark-1, 1));
-    box-shadow: $shadow-dark;
+    // background-image: linear-gradient(rgba($color-secondary-dark-1, 1), rgba($color-secondary-dark-3, 1 ), rgba($color-secondary-dark-1, 1));
+    // box-shadow: $shadow-dark;
     // perspective: 150rem;
     // -moz-perspective: 150rem;
     // position: relative;
@@ -42,14 +42,15 @@
 .nav {
     height: 100%;
     display: flex;
+    justify-content: flex-end;
+    padding: 0 2.5rem;
     
     &__list {
-        width: 100%;
         list-style: none;
         display: flex;
         align-self: center;
-        justify-content: space-evenly;
 
+        
         &-link:link,
         &-link:visited {
             text-decoration: none;
