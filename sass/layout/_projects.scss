@@ -1,9 +1,13 @@
 .projects {
-    grid-row: 3 / 4;
-    grid-column: full-start / full-end;
-    margin: 10rem 0;
+    grid-column: 1 / -1;
     background-color: $color-grey-light-2;
 
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-column-gap: 8rem;
+    grid-row-gap: 8rem;
+    padding: 8rem;
+    align-items: center;
+    justify-items: center;
+
 }

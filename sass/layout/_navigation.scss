@@ -1,73 +1,84 @@
-.topbar {
-    grid-column: full-start / full-end;
-    grid-row: 1 / 2;
-    font-size: 1.5rem;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    height: 7rem;
-    width: 100%;
-    // background-image: linear-gradient(rgba($color-secondary-dark-1, 1), rgba($color-secondary-dark-3, 1 ), rgba($color-secondary-dark-1, 1));
-    // box-shadow: $shadow-dark;
-    // perspective: 150rem;
-    // -moz-perspective: 150rem;
-    // position: relative;
-    // height: 8rem;
-    position: fixed;
-    top: 0;
-
-    &__side {
-        
-        // backface-visibility: hidden;
-        // -webkit-backface-visibility: hidden;
-        // transition: all .8s ease;
-        // position: absolute;
-        // top: 0;
-        // left: 0;
-
-        // &--back {
-        //     transform: rotateX(180deg);
-        // }
-
-    }
-
-    // &:hover &__side--front {
-    //     transform: rotateX(-180deg);
-    // }
-
-    // &:hover &__side--back {
-    //     transform: rotateX(0);
-    // }
-}
-
 .nav {
-    height: 100%;
+    width: 100%;
+    grid-column: full-start / full-end;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: .4rem;
+    text-transform: uppercase;
+    position: fixed;
+    top: 2rem;
     display: flex;
     justify-content: flex-end;
-    padding: 0 2.5rem;
+    padding: 0 3.5rem;
+    z-index: 100;
     
     &__list {
         list-style: none;
         display: flex;
         align-self: center;
-
         
+
+        &-item {
+            position: relative;
+            
+            
+            &:not(:last-child) {
+                margin-right: 1rem;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 50%;
+            }
+        }
+
+        &-item:hover::before,
+        &-item--active::before,
+        &-item:hover::after,
+        &-item--active::after {
+            width: 50%;
+            height: 100%;
+            border: solid 2px $color-primary;
+        }
+
+        &-item:hover::before,
+        &-item--active::before {
+            animation: moveInBorderLeft .4s cubic-bezier(.19,-1.05,.88,.98);
+            border-bottom-left-radius: 3px;
+            border-top-left-radius: 3px;
+            border-right: none;
+        }
+
+        &-item:hover::after,
+        &-item--active::after {
+            animation: moveInBorderRight .4s cubic-bezier(.19,-1.05,.88,.98);
+            border-bottom-right-radius: 3px;
+            border-top-right-radius: 3px;
+            border-left: none;
+        }
+
         &-link:link,
         &-link:visited {
             text-decoration: none;
-            color: $color-secondary;
-            padding: 1rem 1.5rem;
-        }
-
-        &-link:hover {
-            color: $color-grey-light-1;
-            
+            color: $color-secondary-dark-3;
+            padding: .5rem 1.5rem;
+            position: relative;
+            transition: all .3s;
+            z-index: 10;
         }
 
         &-link:active,
         &-link:focus {
-            border: solid 1px $color-primary;
-            border-radius: 0.3rem;
-            transform: translateY(0.3rem);
+            color: $color-grey-light-1;
         }
     }
 }
