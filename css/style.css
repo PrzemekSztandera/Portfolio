@@ -56,7 +56,7 @@ html {
   font-size: 62.5%; }
 
 body {
-  font-family: 'Orbitron', sans-serif;
+  font-family: "Quicksand", sans-serif;
   font-weight: 400;
   /*    font-size: 16px;*/
   line-height: 1.7;
@@ -66,7 +66,7 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: 100vh minmax(80vh, min-content) repeat(2, min-content);
+  grid-template-rows: 100vh minmax(100vh, min-content) repeat(2, min-content);
   grid-row-gap: 5rem;
   grid-template-columns: [full-start] repeat(7, minmax(min-content, 1fr)) [full-end];
   max-width: 100%;
@@ -377,6 +377,27 @@ template {
 [hidden] {
   display: none; }
 
+.btn, .btn:link, .btn:visited {
+  display: inline-block;
+  text-decoration: none;
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: .4rem;
+  color: #eee;
+  background-color: rgba(3, 11, 24, 0.6);
+  border: solid 2px red;
+  border-radius: 3px;
+  box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.7);
+  padding: 1.2rem 2.5rem; }
+
+.btn:hover {
+  background-color: rgba(15, 67, 145, 0.6);
+  transform: translateY(-3px); }
+
+.btn:active, .btn:focus {
+  transform: translateY(1px); }
+
 .card {
   height: 40rem;
   width: 25rem;
@@ -398,6 +419,20 @@ template {
     flex-direction: column; }
     .card__side--back {
       transform: rotateY(180deg); }
+      .card__side--back > div {
+        height: 50%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+      .card__side--back-top {
+        background-color: #fff;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px; }
+      .card__side--back-bottom {
+        background-color: #999;
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px; }
   .card:hover .card__side--front {
     transform: rotateY(-180deg); }
   .card:hover .card__side--back {
@@ -408,21 +443,26 @@ template {
     text-transform: uppercase;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
-    background-color: #fff; }
-    .card__heading-text {
-      display: block;
+    background-color: #fff;
+    position: relative; }
+    .card__heading_text {
+      display: inline-block;
       background-image: linear-gradient(to right, #deaa43, #030b18);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
       text-align: center;
       padding: 2rem;
-      margin: 0 auto; }
+      margin: 0 auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
   .card__project {
     height: 62%; }
-    .card__project-picture {
+    .card__project_picture {
       height: 100%; }
-    .card__project-img {
+    .card__project_img {
       height: 100%;
       width: 100%;
       border-bottom-left-radius: 3px;
@@ -430,7 +470,6 @@ template {
 
 .contact {
   grid-column: full-start / full-end;
-  margin: 10rem 0;
   display: grid;
   grid-template-columns: repeat(7, 1fr); }
 
@@ -452,8 +491,8 @@ template {
       height: 100%;
       text-transform: uppercase;
       text-align: center;
-      font-weight: 400;
-      letter-spacing: 1.2rem;
+      font-weight: 500;
+      letter-spacing: 0.8rem;
       background-color: rgba(3, 11, 24, 0.6);
       border: 2px solid #deaa43;
       border-radius: 6px;
@@ -468,13 +507,13 @@ template {
       writing-mode: vertical-lr;
       text-orientation: upright;
       font-size: 3rem;
-      color: #498df3; }
+      color: #eee; }
     .header__heading--sub {
       grid-column: 3 / -1;
       grid-row: 1 / 2;
       animation: moveInUp 0.7s ease-out;
       font-size: 2.6rem;
-      color: #ffd683; }
+      color: #eee; }
     .header__heading--feature {
       grid-column: 5 / -1;
       grid-row: 3 / -1; }
@@ -482,10 +521,6 @@ template {
 .nav {
   width: 100%;
   grid-column: full-start / full-end;
-  font-size: 1.2rem;
-  font-weight: 700;
-  letter-spacing: .4rem;
-  text-transform: uppercase;
   position: fixed;
   top: 2rem;
   display: flex;
@@ -496,42 +531,45 @@ template {
     list-style: none;
     display: flex;
     align-self: center; }
-    .nav__list-item {
-      position: relative; }
-      .nav__list-item:not(:last-child) {
-        margin-right: 1rem; }
-      .nav__list-item::before {
+    .nav__list_item:not(:last-child) {
+      margin-right: 1rem; }
+    .nav__list_link:link, .nav__list_link:visited {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      color: #000;
+      font-family: "Orbitron", sans-serif;
+      font-size: 1.2rem;
+      font-weight: 400;
+      letter-spacing: .4rem;
+      position: relative;
+      transition: all .3s;
+      z-index: 10; }
+      .nav__list_link:link::before, .nav__list_link:visited::before {
         content: "";
         position: absolute;
         top: 0;
         left: 0; }
-      .nav__list-item::after {
+      .nav__list_link:link::after, .nav__list_link:visited::after {
         content: "";
         position: absolute;
         top: 0;
         left: 50%; }
-    .nav__list-item:hover::before, .nav__list-item--active::before, .nav__list-item:hover::after, .nav__list-item--active::after {
+    .nav__list_link:hover::before, .nav__list_link--active::before, .nav__list_link:hover::after, .nav__list_link--active::after {
       width: 50%;
       height: 100%;
       border: solid 2px #deaa43; }
-    .nav__list-item:hover::before, .nav__list-item--active::before {
+    .nav__list_link:hover::before, .nav__list_link--active::before {
       animation: moveInBorderLeft 0.4s cubic-bezier(0.19, -1.05, 0.88, 0.98);
       border-bottom-left-radius: 3px;
       border-top-left-radius: 3px;
       border-right: none; }
-    .nav__list-item:hover::after, .nav__list-item--active::after {
+    .nav__list_link:hover::after, .nav__list_link--active::after {
       animation: moveInBorderRight 0.4s cubic-bezier(0.19, -1.05, 0.88, 0.98);
       border-bottom-right-radius: 3px;
       border-top-right-radius: 3px;
       border-left: none; }
-    .nav__list-link:link, .nav__list-link:visited {
-      text-decoration: none;
-      color: #030b18;
-      padding: .5rem 1.5rem;
-      position: relative;
-      transition: all .3s;
-      z-index: 10; }
-    .nav__list-link:active, .nav__list-link:focus {
+    .nav__list_link:active, .nav__list_link:focus {
       color: #f7f7f7; }
 
 .projects {
@@ -539,8 +577,7 @@ template {
   background-color: #eee;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-  grid-column-gap: 8rem;
-  grid-row-gap: 8rem;
+  grid-gap: 8rem;
   padding: 8rem;
   align-items: center;
   justify-items: center; }

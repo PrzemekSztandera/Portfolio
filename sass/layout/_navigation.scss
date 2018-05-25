@@ -1,10 +1,6 @@
 .nav {
     width: 100%;
     grid-column: full-start / full-end;
-    font-size: 1.2rem;
-    font-weight: 700;
-    letter-spacing: .4rem;
-    text-transform: uppercase;
     position: fixed;
     top: 2rem;
     display: flex;
@@ -16,15 +12,25 @@
         list-style: none;
         display: flex;
         align-self: center;
-        
 
-        &-item {
+
+        &_item:not(:last-child) {
+            margin-right: 1rem;
+        }
+
+        &_link:link,
+        &_link:visited {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            color: $color-black;
+            font-family: $font-secondary;
+            font-size: 1.2rem;
+            font-weight: 400;
+            letter-spacing: .4rem;
             position: relative;
-            
-            
-            &:not(:last-child) {
-                margin-right: 1rem;
-            }
+            transition: all .3s;
+            z-index: 10;
 
             &::before {
                 content: "";
@@ -41,43 +47,33 @@
             }
         }
 
-        &-item:hover::before,
-        &-item--active::before,
-        &-item:hover::after,
-        &-item--active::after {
+        &_link:hover::before,
+        &_link--active::before,
+        &_link:hover::after,
+        &_link--active::after {
             width: 50%;
             height: 100%;
             border: solid 2px $color-primary;
         }
 
-        &-item:hover::before,
-        &-item--active::before {
+        &_link:hover::before,
+        &_link--active::before {
             animation: moveInBorderLeft .4s cubic-bezier(.19,-1.05,.88,.98);
             border-bottom-left-radius: 3px;
             border-top-left-radius: 3px;
             border-right: none;
         }
 
-        &-item:hover::after,
-        &-item--active::after {
+        &_link:hover::after,
+        &_link--active::after {
             animation: moveInBorderRight .4s cubic-bezier(.19,-1.05,.88,.98);
             border-bottom-right-radius: 3px;
             border-top-right-radius: 3px;
             border-left: none;
         }
 
-        &-link:link,
-        &-link:visited {
-            text-decoration: none;
-            color: $color-secondary-dark-3;
-            padding: .5rem 1.5rem;
-            position: relative;
-            transition: all .3s;
-            z-index: 10;
-        }
-
-        &-link:active,
-        &-link:focus {
+        &_link:active,
+        &_link:focus {
             color: $color-grey-light-1;
         }
     }

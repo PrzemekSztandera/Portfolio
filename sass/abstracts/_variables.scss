@@ -4,10 +4,12 @@ $color-primary-light: #ffd683;
 $color-primary-dark-1: #91681d;
 $color-primary-dark-2: #1b1406;
 
+
 $color-secondary: #498df3;
 $color-secondary-dark-1: #0f4391;
 $color-secondary-dark-2: #082044;
 $color-secondary-dark-3: #030b18;
+
 
 $color-grey-light-1: #f7f7f7;
 $color-grey-light-2: #eee;
@@ -21,5 +23,7 @@ $shadow-dark: 0 2rem 6rem rgba(0,0,0,.5);
 $shadow-light: 0 2rem 3rem rgba(0,0,0,.2);
 $shadow-white: 0 1rem 5rem rgba(255,255,255,.2);
 
-// FONT SIZES
-$default-font-size: 1.6rem;
+
+//FONTS
+$font-primary: 'Quicksand', sans-serif;
+$font-secondary: 'Orbitron', sans-serif; 

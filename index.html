@@ -3,7 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://fonts.googleapis.com/css?family=Orbitron:400,500,700,900" rel="stylesheet">  
+        <link href="https://fonts.googleapis.com/css?family=Orbitron:400,500,700,900" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">  
         <link rel="stylesheet" href="css/icon-font.css">
         <link rel="stylesheet" href="css/style.css">
         <!--For favicon-->
@@ -15,13 +16,13 @@
         <div class="container">
             <nav class="nav">
                 <ul class="nav__list">
-                    <li class="nav__list-item "><a href="#" class="nav__list-link">Home</a></li>
-                    <li class="nav__list-item"><a href="#" class="nav__list-link">About me</a></li>
-                    <li class="nav__list-item"><a href="#" class="nav__list-link">Projects</a></li>
-                    <li class="nav__list-item"><a href="#" class="nav__list-link">Contact</a></li>
+                    <li class="nav__list_item "><a href="#header" class="nav__list_link">Home</a></li>
+                    <li class="nav__list_item"><a href="#" class="nav__list_link">About me</a></li>
+                    <li class="nav__list_item"><a href="#projects" class="nav__list_link">Projects</a></li>
+                    <li class="nav__list_item"><a href="#contact" class="nav__list_link">Contact</a></li>
                 </ul>
             </nav>
-            <header class="header">
+            <header class="header" id="header">
                 <div class="header__heading">
                     <h1 class="header__heading--main">przemek sztandera
                     </h1>
@@ -30,53 +31,81 @@
                     <div class="header__heading--feature">Feature</div>
                 </div>
             </header>
-            <main class="projects">
+            <main class="projects" id="projects">
                 <div class="card">
                     <div class="card__side card__side--front">
-                        <h3 class="card__heading"><span class="card__heading-text">Project name</span></h3>
+                        <h3 class="card__heading"><span class="card__heading_text">Project name</span></h3>
                         <div class="card__project">
-                            <figure class="card__project-picture card__project-picture--1">
-                                <img src="img/project-1.png" alt="Project picture" class="card__project-img">
+                            <figure class="card__project_picture card__project_picture--1">
+                                <img src="img/project-1.png" alt="Project picture" class="card__project_img">
                             </figure>
                         </div>
                     </div>
-                    <div class="card__side card__side--back">Back1</div>
+                    <div class="card__side card__side--back">
+                        <div class="card__side--back-top">
+                            <a href="#" class="btn btn--top">github</a>
+                        </div>
+                        <div class="card__side--back-bottom">
+                            <a href="#" class="btn btn--bottom">website</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="card">
                     <div class="card__side card__side--front">
-                        <h3 class="card__heading"><span class="card__heading-text">Project name</span></h3>
+                        <h3 class="card__heading"><span class="card__heading_text">Project name</span></h3>
                         <div class="card__project">
-                            <figure class="card__project-picture card__project-picture--2">
-                                <img src="img/project-2.png" alt="Project picture" class="card__project-img">
+                            <figure class="card__project_picture card__project_picture--2">
+                                <img src="img/project-2.png" alt="Project picture" class="card__project_img">
                             </figure>
                         </div>
                     </div>
-                    <div class="card__side card__side--back">Back1</div>
+                    <div class="card__side card__side--back">
+                        <div class="card__side--back-top">
+                            <a href="#" class="btn btn--top">github</a>
+                        </div>
+                        <div class="card__side--back-bottom">
+                            <a href="#" class="btn btn--bottom">website</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="card">
                     <div class="card__side card__side--front">
-                        <h3 class="card__heading"><span class="card__heading-text">Project name</span></h3>
+                        <h3 class="card__heading"><span class="card__heading_text">Project name</span></h3>
                         <div class="card__project">
-                            <figure class="card__project-picture card__project-picture--3">
-                                <img src="img/project-3.png" alt="Project picture" class="card__project-img">
+                            <figure class="card__project_picture card__project_picture--3">
+                                <img src="img/project-3.png" alt="Project picture" class="card__project_img">
                             </figure>
                         </div>
                     </div>
-                    <div class="card__side card__side--back">Back1</div>
+                    <div class="card__side card__side--back">
+                        <div class="card__side--back-top">
+                            <a href="#" class="btn btn--top">github</a>
+                        </div>
+                        <div class="card__side--back-bottom">
+                            <a href="#" class="btn btn--bottom">website</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="card">
                     <div class="card__side card__side--front">
-                        <h3 class="card__heading"><span class="card__heading-text">Project name</span></h3>
+                        <h3 class="card__heading"><span class="card__heading_text">Project name</span></h3>
                         <div class="card__project">
-                            <figure class="card__project-picture card__project-picture--4">
-                                <img src="img/project-4.png" alt="Project picture" class="card__project-img">
+                            <figure class="card__project_picture card__project_picture--4">
+                                <img src="img/project-4.png" alt="Project picture" class="card__project_img">
                             </figure>
                         </div>
                     </div>
-                    <div class="card__side card__side--back">Back1</div>
+                    <div class="card__side card__side--back">
+                        <div class="card__side--back-top">
+                            <a href="#" class="btn btn--top">github</a>
+                        </div>
+                        <div class="card__side--back-bottom">
+                            <a href="#" class="btn btn--bottom">website</a>
+                        </div>
+                    </div>
                 </div>
             </main>
-            <section class="contact">
+            <section class="contact" id="contact">
                 <div class="card card--1">
                     <div class="card__side card__side--front">Front2</div>
                     <div class="card__side card__side--back">Back2</div>

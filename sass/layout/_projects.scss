@@ -4,10 +4,9 @@
 
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-    grid-column-gap: 8rem;
-    grid-row-gap: 8rem;
+    grid-gap: 8rem;
+    // margin: 5rem 0;
     padding: 8rem;
     align-items: center;
     justify-items: center;
-
 }
