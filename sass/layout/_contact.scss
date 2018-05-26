@@ -1,7 +1,20 @@
 .contact {
     grid-column: full-start / full-end;
-    // margin: 10rem 0;
+    margin: 10rem 0;
 
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    grid-column-gap: 5rem;
+
+    &__box {
+        
+
+        &_link {
+
+        }
+
+        &_icon {
+            height: 5rem;
+        }
+    }
 }

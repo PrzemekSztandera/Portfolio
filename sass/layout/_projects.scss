@@ -2,11 +2,11 @@
     grid-column: 1 / -1;
     background-color: $color-grey-light-2;
 
+
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     grid-gap: 8rem;
-    // margin: 5rem 0;
     padding: 8rem;
-    align-items: center;
+    align-content: center;
     justify-items: center;
 }

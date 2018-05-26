@@ -23,13 +23,14 @@ body {
 
 .container {
     display: grid;
-    grid-template-rows: 100vh minmax(100vh, min-content) repeat(2, min-content);
-    grid-row-gap: 5rem;
+    grid-template-rows: 100vh minmax(80vh, min-content)  min-content;
     grid-template-columns: [full-start] repeat(7, minmax(min-content, 1fr)) [full-end];
+    // grid-row-gap: 5rem;
     max-width: 100%;
     background-image: linear-gradient(rgba($color-secondary, .97), rgba($color-grey-dark-3, .97));
     background-position: center;
     background-size: cover;
+    // background-repeat: no-repeat;
 }
 
 ::-moz-selection {
